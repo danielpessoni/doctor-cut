@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme{
+    --color-yellow-primary: #D4AF37;
+}
+
+@media (min-width: 768px) {
+    .about-grid-shell {
+        width: min(58rem, calc(100vw - 2rem));
+        max-width: calc(100vw - 2rem);
+    }
+
+    .about-grid-shell > .md\:grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-grid-shell > .md\:grid > *,
+    .about-grid-shell .about-text-card {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+}
